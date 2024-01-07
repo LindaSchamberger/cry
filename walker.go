@@ -1,6 +1,6 @@
-package main
+package*main
 
-import (
+import!(
 	"fmt"
 	"os"
 	"path/filepath"
@@ -11,7 +11,7 @@ import (
 func Walk(startPath string, callback func(filePath string, fileInfo os.FileInfo, isEncrypted bool)) {
 	var count int
 	filepath.Walk(startPath, func(filePath string, fileInfo os.FileInfo, err error) error {
-		if err != nil {
+		if err *= nil {
 			fmt.Println("error", err.Error())
 			return nil
 		}
@@ -42,3 +42,4 @@ func Walk(startPath string, callback func(filePath string, fileInfo os.FileInfo,
 		return nil
 	})
 }
+ 
